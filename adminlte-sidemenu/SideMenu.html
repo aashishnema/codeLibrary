@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>MLA Feedback System:GIS</title>
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="GIS Madhya Pradesh State" />
+    <!--favicon-->
+    <link href="images/icon.png" rel="shortcut icon" />
+    <!--bootstrap files-->
+    <link href="bootstrap.css" rel="stylesheet" />
+
+    <link href="font-awesome.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome.min.css">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="sidemenu/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="AdminLTE.min.css">
+    <link rel="stylesheet" href="_all-skins.min.css">
+    <!--custom css-->
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <style>
+        .main-sidebar {
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            position: absolute;
+            top: 25px;
+            left: 29px;
+            padding-top: 5px;
+            min-height: 80%;
+            width: 230px;
+            z-index: 810;
+            -webkit-transition: -webkit-transform .3s ease-in-out, width .3s ease-in-out;
+            -moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
+            -o-transition: -o-transform .3s ease-in-out, width .3s ease-in-out;
+            transition: transform .3s ease-in-out, width .3s ease-in-out;
+        }
+
+
+.skin-blue .sidebar a {
+    padding: 8px 13px 10px 14px !IMPORTANT;
+}
+.sidebar-menu li a:hover
+{
+    background-color:black !important;
+    border-radius:15px;
+}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #222d32 !important;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+
+.pac-container, .pac-logo
+{
+    z-index:999999 !important;
+}
+        
+        
+#display-search {
+    visibility: hidden;
+    height: 0px;
+  
+    overflow: hidden;
+    /*transition: 0.5s;
+    -webkit-transition: 0.5s;*/
+    width: 100%;
+   
+}
+
+    #display-search.visible {
+        visibility: visible;
+        height: 220px;
+        width: 100%;
+        color: white;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
+        <div class="col-lg-2 col-xs-6 col-md-2 col-sm-3" style="position: absolute; z-index: 9999; top: 80px;">
+
+            
+
+            <span id="search-icon" style="display: block">
+
+                <h9 id="icon1" onclick="Tools('icon1')" class="fa fa-bars" style="color: black; font-size: 22px; cursor: pointer;" />
+            </span>
+
+            <div id="display-search">
+                <div class="" style="padding: 0px 15px;">
+
+                    <aside class="main-sidebar">
+
+                        <!-- sidebar: style can be found in sidebar.less -->
+                        <section class="sidebar">
+                            <ul class="sidebar-menu" data-widget="tree">
+                                <li>
+                                    <a href="#" class="fa fa-area-chart" onclick="mment_event();" id="btnMment" title="Measurement">
+                                        <i></i><span>Measurement</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-list" onclick="themer.dom.generate_report();" id="reportBtn" title="Generate Report">
+                                        <i></i><span>Reports</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-crosshairs" onclick="themer.dom.selector_event();" id="selectorBtn" title="Selector">
+                                        <i></i><span>Selector</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="ShowBasemap" class="fa fa-map" title="Show Basemap">
+                                        <i></i><span>Basemap</span>
+
+                                    </a>
+                                </li>
+
+
+
+
+                            </ul>
+                        </section>
+                        <!-- /.sidebar -->
+                    </aside>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    
+    <script>
+        $(document).ready(function() {
+
+            $("#search-icon").on("click", function() {
+
+                if ($("#display-search").hasClass("visible")) {
+                    $("#display-search").removeClass("visible");
+                } else {
+                    $("#display-search").addClass("visible");
+                }
+
+            });
+
+        });
+
+    </script>
+    <script>
+        function Tools(CrossIcon) {
+            if (document.getElementById(CrossIcon).className == "fa fa-bars") {
+                document.getElementById(CrossIcon).className = "fa fa-close";
+            } else {
+                document.getElementById(CrossIcon).className = "fa fa-bars";
+            }
+        }
+
+    </script>
+    <script>
+        $('#ShowBasemap').click(function() {
+            $("#DivBaseMap").toggle('drop', {
+                direction: 'up'
+            }, 150);
+        });
+
+    </script>
+
+
+</body>
+
+</html>

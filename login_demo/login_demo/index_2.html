@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<head>
+<title>Welcome Name of Department</title>  
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.sso.mp.gov.in/webroot/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://www.sso.mp.gov.in/webroot/img/favicon/manifest.json"> 
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="http://www.sso.mp.gov.in/webroot/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="Content-type" content="Content-Type: application/x-font-woff" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+<meta name="description" content="Single Sign On, Government of Madhya Pradesh" />
+<meta name="keywords" content="Single Sign On, Government of Madhya Pradesh" />
+<meta name="robots" content="no-cache,noindex,nofollow" />
+<link href="css/login/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	.msgAlert p{
+		color: #b94a48 !important;
+	}
+</style>
+<script src="plugins/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="scripts/md5.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+
+$(function(){
+	$('#frmlogin').on('submit',function(){
+		var u_ps = "";
+        var hash = "";
+        var seed = "813ba92216662134b94171073d2772f3";
+        u_ps = document.getElementById("u_ps").value;
+        if(u_ps!=""){
+			hash = md5(md5(seed)+md5(u_ps)); 
+        	document.getElementById("u_ps").value=hash; 
+        	u_ps = document.getElementById("u_ps").value;
+		}
+	});//end click event
+});//end dom
+
+</script>
+<body>      
+<div class="outer">    
+<div class="middle">
+<div class="login-box">
+  <div class="row brand">
+    <div class="col-xs-3 no-padding">
+      <img src="img/sso-logo.svg" alt="SSO" class="img-responsive">
+    </div>
+    <div class="col-xs-9">
+      <div class="h4 title">Water Resource Department</div>
+      <div class="h5 sub-title">Government of Madhya Pradesh</div>
+  </div>
+</div>
+<div class="h4">Member Sign in</div>
+<form action="#" class="login-form" id="frmlogin" autocomplete="off" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_token_id" value="f9c85bfb5cbe046b959d5161ff42be16" />                                                        
+<div style="display:none;"><input type="password" name="cust_pass" value=""  />
+</div><input type="hidden" name="valid" value="813ba92216662134b94171073d2772f3" />
+
+<div class="row">
+  <div class="col-lg-12">
+   <div id="processingAjax" class="hide"><img src="http://www.sso.mp.gov.in/webroot/img/fadingSquares.gif" /></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+     </div>
+</div>
+<!--End Validation message-->
+
+<div class="input-group input-error">
+  <span class="input-group-addon"><em class="fa fa-user"></em></span>
+  <input type="text" class="form-control" placeholder="User Id/Email Id" name="user_email" tabindex="1" autofocus />
+</div>
+
+<div class="input-group input-error">
+  <span class="input-group-addon"><em class="fa fa-lock"></em></span>
+  <input type="password" class="form-control" placeholder="Password" id="u_ps" name="u_ps" tabindex="2"/>
+</div>
+
+<div class="row">
+<div class="col-md-6 captcha input-error">
+  <div id="captchaimage" style="display: inline-block"><img  src="captcha/1548672716.6619.jpg" style="width: 150; height: 35; border: 0;" alt=" " /></div>
+  <span class="help">Can't read?  
+   <a id="recap" href="javascript:void(0)">click here</a>.
+  </span>
+</div>
+<div class="col-md-6">
+ <div class="input-error">
+  <input type="text" class="form-control" placeholder="Secutity Code" name="captcha" tabindex="3" />
+  </div>
+</div>
+</div>
+<button class="btn btn-primary btn-lg">Sign in</button>
+</form><div class="row">
+  <div class="col-xs-6">
+   <a href="http://www.sso.mp.gov.in/member/forgot-password"> Forgot Password ?</a>
+  </div>
+  <div class="col-xs-6 text-right">
+     <a href="http://www.sso.mp.gov.in/member/registration"> Register New User</a>
+  </div>
+</div>
+</div><!--End login-box-->
+<div class="shortlink"><!--reg-nav-->
+ 
+</div><!--End shortlink--></div><!--End middle-->
+</div><!--End outer-->
+
+  <div class="footer">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="collapse-icon navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <em class="fa fa-plus"></em>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+         
+        </div>
+      </div><!--End container-fluid-->
+    </nav><!--End navbar-->
+    <div class="copyright">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-5 no-padding"> <ul class="nav navbar-nav navbar-center"> 
+            <li><a href="javascript:void(0);" pageName="#" class="pop" title="Hyperlink Policy"> Disclaimer</a></li> 
+            <li><a href="javascript:void(0);" pageName="#" class="pop" title="Terms of Use"> Terms </a></li> 
+            <li><a href="javascript:void(0);" pageName="#" class="pop" title="Privacy Policy"> Privacy Policy</a></li> 
+            <li><a href="javascript:void(0);" pageName="#" class="pop" title="Disclaimer">Contact </a></li> 
+          </ul> </div>
+       <div class="col-md-2 no-padding text-center"></div>
+       <div class="col-md-5 text-right no-padding">Website Designed developed & Maintained by Center of Excellence (CoE), <a href="http://mapit.gov.in/" title="MAP_IT" target="_blank">MAP_IT.</a> </div>
+        </div>
+    </div><!--End container-->
+    </div><!--End copyright-->
+  </div><!--End footer-->
+
+<div class="modal fade" id="showPageCont" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+ 
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+$(function() {
+	$(".pop").click(function(){
+	  var pageTitle = $(this).attr('title');
+	  var pageName = $(this).attr('pageName');
+	  $("#showPageCont .modal-title").html(pageTitle);
+	  $("#showPageCont .modal-body").html("Content loading please wait...");
+	  $("#showPageCont").modal("show");
+	  $("#showPageCont .modal-body").load(pageName);
+	});
+});	
+</script><!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="scripts/login/script.js"></script>
+<script src="plugins/jquery-validation/dist/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $.backstretch([
+    "img/bg/bg3.jpg"
+  ],{
+   fade: 750,
+   duration: 5000
+  });
+</script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script type="text/javascript">
+jQuery(document).ready(function(){
+		var img_path = "http://www.sso.mp.gov.in/captcha/";
+		
+		jQuery('#recap').on('click',function(e){	
+		e.preventDefault();
+		jQuery.get( "http://www.sso.mp.gov.in/manage/Authuser/loadcaptcha", function( data ) {
+  		     jQuery("#captchaimage").html('<img src="'+ img_path + data +'" height="45px" width="150px">');
+		});					
+	   });
+});
+</script>
+<script>
+jQuery(document).ready(function() {     
+	$('.login-form').validate({
+	   errorElement: 'span', //default input error message container
+	   errorClass: 'help-block', // default input error message class
+	   focusInvalid: false, // do not focus the last invalid input
+	   rules: {
+	     user_email: {
+	       required: true
+	     },
+	     u_ps: {
+	       required: true
+	     },
+	     remember: {
+	       required: false
+	     },
+		 captcha:{
+		   required: true,
+		 }
+	   },
+	   messages: {
+	     user_email: {
+           required: "User Id is required field.",
+	     },
+	     user_pass: {
+	       required: "Password is required field."
+	     },
+	     captcha:{
+	       required: "Security code is required field."
+	     }
+	   },
+	  highlight: function (element) { // hightlight error inputs
+	    $(element).closest('.input-error').addClass('has-error');//set error class to the control group
+	  },
+      success: function (label) {
+	    label.closest('.input-error').removeClass('has-error');
+	    label.remove();
+	  },
+	  errorPlacement: function (error, element) {
+	    error.insertAfter(element.closest('.input-error'));
+	  },
+      submitHandler: function (form) {
+      	$('#processingAjax').removeClass('hide');
+	    form.submit();
+	  }
+	});//end validation
+});//end dom
+</script> 
+</body>
+</html>
